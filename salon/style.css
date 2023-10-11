@@ -1,0 +1,544 @@
+* *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --bg-color: #D2D2D2;
+    --gold-color: #E7AC14;
+    --text-color: #000;
+
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+nav {
+    background-color: var(--bg-color);
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+li a {
+    margin: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+}
+
+li a:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.7)
+}
+
+#logo {
+    width: auto;
+    height: 90px;
+}
+
+section {
+    height: 650px;
+    min-width: 100%;
+}
+
+#hero_section {
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-color);
+    height: 850px;
+
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    width: 1200px;
+    height: 800px;
+}
+
+.hero_content {
+    width: 100%;
+    margin-top: -110px;
+}
+
+.hero_img {
+    background-image: url('images/hero_img.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-left: 50px;
+    width: 100%;
+    height: 65%;
+    border-radius: 25px;
+    position: relative;
+}
+
+.hero_img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+}
+
+.hero_head {
+    font-size: 52px;
+    color: var(--gold-color);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero_content .hero_head {
+    margin-bottom: 0px;
+}
+
+.hero_content .hero_text {
+    margin-bottom: 80px;
+
+}
+
+.hero p {
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.cta_btn a {
+    text-decoration: none;
+    background-color: var(--gold-color);
+    color: var(--text-color);
+    padding: 15px 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+
+#services {
+    background-color: #000;
+    padding: 15px;
+    color: goldenrod;
+    text-align: start;
+    width: 100%;
+    min-height: 800px;
+
+}
+
+.heading {
+    color: goldenrod;
+    font-family: 'Dancing Script', cursive;
+    font-size: 65px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+.style_sidebar {
+    display: flex;
+    align-items: center;
+    height: 550px;
+}
+
+.description {
+    margin-left: 15%;
+    width: 20%;
+    padding: 15px;
+}
+
+
+.description h1 {
+    font-size: 50px;
+    margin: 15px 0;
+}
+
+.description .hoverState a {
+    margin: 10px;
+    margin-top: -30px;
+}
+
+
+.desc {
+    color: rgb(98, 97, 97);
+    font-size: 14px;
+    margin: 15px;
+}
+
+
+.description .hoverState a {
+    text-decoration: none;
+    position: relative;
+    color: white;
+    transition: border-bottom 0.2s opacity 0.3s;
+}
+
+.hoverState a:hover {
+    border-bottom: 1px solid goldenrod;
+    opacity: 0.9;
+    transform: translateY(-10px);
+}
+
+.arrow {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 6px 10px;
+    background-color: #000;
+    font-size: 22px;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 8px;
+    transition: background-color 0.3s, color 0.1s;
+
+}
+
+.arrow:hover {
+    border: 2px solid goldenrod;
+    background-color: black;
+    color: goldenrod;
+}
+
+.btn {
+    margin-top: 12px;
+}
+
+.style_container {
+    display: flex;
+    overflow: hidden;
+    width: 55%;
+
+}
+
+.styleCont {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    border-radius: 25px;
+    position: relative;
+    height: 400px;
+    min-width: 250px;
+    margin-right: 20px;
+    text-align: start;
+    background-position: center;
+    background-size: cover;
+}
+
+.styleCont1 {
+    background-image: url(images/womanBraids_image3.jpg);
+}
+
+.styleCont2 {
+    background-image: url(images/womanCare_image1.jpg);
+}
+
+.styleCont3 {
+    background-image: url(images/womanStyle_image3.jpg);
+}
+
+.styleCont4 {
+    background-image: url(images/nails_image2.jpg);
+}
+
+.styleCont5 {
+    background-image: url(images/womanBraids_image1.jpg);
+}
+
+.styleCont6 {
+    background-image: url(images/womanBraids_image2.jpg);
+}
+
+.styleCont7 {
+    background-image: url(images/womanStyle_image1.jpg);
+}
+
+.styleCont8 {
+    background-image: url(images/womanStyle_image3.jpg);
+}
+
+.styleCont9 {
+    background-image: url(images/womanStyle_image3.jpg);
+}
+
+.styleCont::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 25px;
+}
+
+.styleCont b {
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    color: white;
+    font-size: 23px;
+    margin: 30px;
+}
+
+
+
+/* .card_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid goldenrod;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 300px;
+    height: 350px;
+    margin: 0 25px;
+    padding: 10px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card p {
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+} */
+
+.card_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.card img{
+    width:110px;
+    height:100px;
+    margin: 20px 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid goldenrod;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 350px;
+    height: 450px;
+    margin: 0 50px;
+    padding: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card_container a {
+    text-decoration: none;
+    color: #000;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card p {
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+}
+
+#testimonials {
+    background-color: rgb(199, 199, 199);
+    height: 600px;
+    width: 100%;
+}
+
+.heading .testimonials{
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    font-size: 87px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.testimonial_container {
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testi_box {
+    width: 300px;
+    height: 250px;
+    margin-right: 80px;
+}
+
+.testi_box .message {
+    width: 100%;
+    height: 70%;
+
+}
+
+.testi_box .user_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+}
+
+.user_info .dp {
+    background-image: url(images/kidsbraid_image6.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 60%;
+    width: 15%;
+    padding: 15px;
+}
+
+.user_info .userinput {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6px;
+    width: 80%;
+    height: 100%;
+}
+
+.username  p{
+    margin:0px;
+}
+
+.username {
+    height: 50%;
+    margin: 0;
+}
+
+.star_rating {
+    background-color: #000;
+    height: 50%;
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    width: 100%;
+    height: 500px;
+    padding: 30px;
+    position: relative;
+}
+
+.footer_container {
+    display: flex;
+}
+
+footer p {
+    margin: 0px;
+    padding: 0;
+}
+
+.days {
+    margin-right: 15px;
+}
+
+.head {
+    display: inline;
+    font-size: 26px;
+    color: var(--gold-color)
+}
+
+.operation_hours {
+    display: flex;
+    margin-left: 50px;
+    margin-bottom: 45px;
+}
+
+
+.location img {
+    width: 47px;
+    height: 57px;
+}
+
+.location a {
+    text-decoration: none;
+    color: #fff;
+    height: 50px;
+}
+
+.location {
+    width: 400px;
+    display: flex;
+    margin: 0 150px;
+}
+
+.label{
+    margin-top: 60px;
+    margin-left:8px;
+}
+
+
+
+.feedBack_section{
+   position: absolute;
+   right: 0;
+   top:0;
+   width:50%;
+   height:100%; 
+   background: rgba(217, 217, 217, 0.10);
+   padding:50px;
+   
+}
+
+textarea{
+   
+    width: 80%;
+    height: 80%;
+    border-radius: 15px;
+    padding:15px;
+}
+
+  .feedBack_section a{
+    position: absolute;
+    text-decoration: none;
+    background-color: var(--gold-color);
+    color: var(--text-color);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 900px;
+}
+

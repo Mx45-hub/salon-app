@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+
+    <style>
+        #book p {
+            display: flex;
+            justify-content: center;
+            color: goldenrod;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        body {
+            background-color: #dddddd;
+            height: 800px;
+        }
+
+
+        .form_box {
+            display: flex;
+            justify-content: center;
+            padding:25px;
+        }
+
+        label {
+            font-size: 15px;
+            color: rgba(0, 0, 0, 0.8)
+        }
+
+        input {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            width: 450px;
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        select {
+            margin-top: 5px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            text-decoration: none;
+            border: none;
+            background-color: var(--gold-color);
+            color: var(--text-color);
+            padding: 10px 10px;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <img src="images/logo.png" alt="Logo" id="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="ous_kiddies.html">Ous Kiddies</a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="book">
+
+        <p>Book an Appointment</p>
+        
+        <div class="form_box">
+            <form id="form" action="/" method="post">
+                <div class="input_control">
+                    <label for="name">First Name:</label><br>
+                    <input type="text" id="firstName" name="name" placeholder="Ggoofy">
+                    <div class="errorMsg"></div><br>
+                    <br>
+                </div>
+
+
+                <div class="input_control">
+                    <label for="name">Last Name:</label><br>
+                <input type="text" id="lastName" name="name" placeholder="Femure" >
+                <div class="errorMsg"></div><br>
+                <br>
+                </div>
+
+               <div class="input_control">
+                    <label for="email">Email Address:</label><br>
+                    <input type="text" id="email" name="email" placeholder="ous@ous.com" >
+                    <div class="errorMsg"></div><br>
+                    <br>
+               </div>
+
+              
+
+                <div class="input_control">
+                    <label for="name">Select a Service</label><br>
+                <select id="serviceType" name="service">
+                    <option value="Hair_Treatment">Hair Treatment</option>
+                    <option value="Brow_Treatment">Brow Treatment</option>
+                    <option value="Hair_Cutting">Hair Cutting, Colouring &Styling</option>
+                    <option value="Nail_Treatment">Nail Treatment</option>
+                    <option value="Weaves_Extention">Weaves & Hair Extention</option>
+                    <option value="Plaiting">Plaiting</option>
+                    <option value="Make_up">Make up (Bridal, Matric dance etc)</option>
+                    <option value="Male_Mani_Pedi">Male Mani & Pedi</option>
+                </select>
+                <div class="errorMsg"></div><br>
+                </div>
+
+            <button type="submit" id="btnSubmit">Book  now</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+
+        const firstName = document.getElementById('firstName');
+        const lastName = document.getElementById('lastName');
+        const email = document.getElementById('email');
+        const Cell = document.getElementById('number');
+        const serviceSelect = document.getElementById('serviceType');
+
+        const form = document.getElementById('form');
+        const btn = document.getElementById('btnSubmit');
+
+        
+
+        form.addEventListener('submit', e =>{
+            
+
+           validateInputs(); 
+        });
+
+        const setError = (element, message) => {
+            const inputControl = element.parentElement;
+            const errorDisplay = inputControl.querySelector('.errorMsg');
+
+            errorDisplay.innerText = '';
+            inputControl.classList.add('errorMsg');
+            inputControl.classList.remove('success');
+        };
+
+        const setSuccess = element => {
+            const inputControl = element.parentElement;
+            const errorDisplay = inputControl.querySelector('.errorMsg');
+
+            errorDisplay.innerText = '';
+            inputControl.classList.add('success');
+            inputControl.classList.remove('errorMsg');
+        };
+
+        const isValidEmail = Email => {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(Email).toLowerCase);
+        }
+
+        function isValidPhoneNumber(phoneNumber) {
+        const pattern = /^\d{10}$/;
+         return pattern.test(phoneNumber);
+}
+
+
+        const  validateInputs =  () => {
+            const name = firstName.value.trim();
+            const Lname = lastName.value.trim();
+            const email = Email.value.trim();
+            const cellNo = Cell.value.trim();
+            
+
+            if (name === ''|| name == null){
+                setError(firstname, 'Username is  required');
+            }else {
+                setSuccess(firstName);
+            }
+
+            if(email === '' || email == null){
+                setError(Email, 'Email is Required');
+            } else if(!isValidEmail(email)) {
+                setError(email, 'Please provide a valid email address');
+            } else {
+                setSuccess(email);
+            }  
+
+            if (cellNo === ''){
+                setError(Cell, 'CellPhone Nummber is Required')
+            }else if(!isValidPhoneNumber(cellNo) && cellNo.length !== 10 ) {
+                setError(Cell, 'Please provide a 10 digit Cellphone number')
+            }else {
+                setSuccess(cellNo);
+            }
+
+
+        };
+
+            
+        
+    </script>
+</body>
+
+</html>
+
